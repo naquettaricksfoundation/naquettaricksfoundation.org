@@ -1,0 +1,205 @@
+/*
+ * campaign.less
+ * -----------------------------------------------
+*/
+
+
+/*
+ * 3.6  -> Causes
+ * -----------------------------------------------
+*/
+.campaign .thumb {
+  position: relative;
+  overflow: hidden;
+}
+.campaign .thumb img {
+  transition: all 500ms ease 0s;
+}
+.campaign:hover .thumb img {
+  transform: scale(1.1);
+}
+.campaign .thumb .overlay-donate-now {
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: -50px;
+  transition: all 400ms ease 0s;
+  width: 40%;
+}
+.campaign:hover .thumb .overlay-donate-now {
+  top: 40%;
+}
+.campaign-overlay {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(3, 3, 3, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 400ms ease-in-out 0s;
+}
+.campaign-overlay-fixed {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(3, 3, 3, 0.2);
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  transition: all 400ms ease-in-out 0s;
+}
+.campaign-details-new {
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.77) 77%, rgba(0,0,0,0.77) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(77%,rgba(0,0,0,0.77)), color-stop(100%,rgba(0,0,0,0.77))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.77) 77%,rgba(0,0,0,0.77) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.77) 77%,rgba(0,0,0,0.77) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.77) 77%,rgba(0,0,0,0.77) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.77) 77%,rgba(0,0,0,0.77) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#c4000000',GradientType=0 ); /* IE6-9 */
+  bottom: 0;
+  left: 0;
+  padding: 0 30px 30px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.feature-campaign-details {
+  bottom: 0;
+  color: @white;
+  left: 0;
+  padding: 0 21px 10px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;  
+}
+.campaign:hover .thumb .campaign-overlay {
+  opacity: 1;
+}
+.donate-piechart {
+  margin: 0 auto;
+}
+.donate-piechart.piechart-absolute {
+  /* bottom: -40px;
+  right: 15px;
+  position: absolute; */
+}
+.donate-piechart .piechart-block {
+  border-radius: 50%;
+}
+.donate-piechart .piechart canvas {
+  max-height: 70px;
+}
+.donate-piechart .piechart canvas {
+  background-color: @gray-lighter;
+  border-radius: 50%;
+  max-height: 60px;
+}
+.donate-piechart .piechart-block .piechart {
+  min-height: 60px;
+  min-width: 60px;
+}
+.donate-piechart .piechart-block .percent::after {
+  font-size: 12px;
+}
+.donate-piechart .piechart-block .percent {
+  font-size: 16px;
+  line-height: 60px;
+  position: relative;
+}
+
+/*
+ * 3.29  -> Pie Charts
+ * -----------------------------------------------
+*/
+.piechart {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+.piechart .percent {
+  font-size: 18px;
+  z-index: 100;
+  line-height: 60px;
+}
+.piechart .percent:after {
+  content: "%";
+  font-size: 18px;
+}
+.piechart canvas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+/*
+ * 3.29  -> Featured Causes
+ * -----------------------------------------------
+*/
+.project-conditions {
+  background: @white-f9 none repeat scroll 0 0;
+  padding: 8px;
+}
+.project-conditions li {
+  border-right: 1px solid #d3d3d3;
+  color: #808080;
+  width: 32%;
+}
+.project-conditions li:last-child {
+  border-right: medium none;
+}
+.project-conditions li strong {
+  display: block;
+  font-weight: 600;
+  color: @black-222;
+}
+
+.solar-campaign {
+  .thumb {
+  position: relative;
+  overflow: hidden;   
+  img {
+  transition: all 500ms ease 0s;
+    } 
+  }  
+.overlay-donate-now {
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: -50px;
+  transition: all 400ms ease 0s;
+}
+&:hover .thumb .overlay-donate-now {
+  top: 10%;
+}
+
+.campaign-overlay {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(3, 3, 3, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 400ms ease-in-out 0s;
+}
+  &:hover .thumb img {
+  transform: scale(1.1);  
+  }
+  &:hover .thumb .campaign-overlay {
+  opacity: 1;
+  }
+  p {
+    font-size: 15px;
+  }
+}

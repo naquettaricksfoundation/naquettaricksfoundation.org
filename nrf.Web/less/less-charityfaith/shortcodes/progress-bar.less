@@ -1,0 +1,113 @@
+/*
+ * Shortcode: progress-bar.less
+ * -----------------------------------------------
+*/
+.progress-item {
+	margin-top: 20px;
+	.progress {
+		background-color: @white-base;
+		box-shadow: 0 0 1px fade(@black, 40%) inset;
+		border-radius: 20px;
+		height: 22px;
+		margin-bottom: 15px;
+		overflow: visible;
+	}
+	.progress-new {
+		border: 1px solid @white-f8;
+		box-shadow: 0 0 1px fade(@black, 40%) inset;
+		border-radius: 20px;
+		height: 18px;
+		margin-bottom: 15px;
+		overflow: visible;
+
+	.progress-bar {
+		border-radius: 20px;
+		font-size: 14px;
+		padding-left: 10px;
+		position: relative;
+		text-align: left;
+		width: 0;
+		line-height: 16px;
+		.transition(all 1s ease 0s);
+		.percent {
+			color: @white-f8;
+			border-radius: 20px;
+			padding: 0 8px; 
+			position: absolute;
+			right: -10px;
+			top: 0px;
+			}
+		}	
+	}
+
+.progress-bar {
+		border-radius: 20px;
+		font-size: 17px;
+		padding-left: 10px;
+		position: relative;
+		text-align: left;
+		width: 0;
+		line-height: 22px;
+		.transition(all 1s ease 0s);
+		.percent {
+			font-size: 15px;
+			padding: 0 11px; 
+			position: absolute;
+			right: -7px;
+			top: 0px;
+			z-index: 9999;
+		}
+		i {
+			position: absolute;
+			right: -4px;
+			top: -12px;
+			z-index: 1;
+		}
+	}
+
+	&.progress-white {
+		.progress {
+			padding: 2px;
+		}
+	}
+
+	&.style2 {
+		.progress {
+			height: 25px;
+		}
+
+		.progress-bar {
+			.percent {
+				background: none;
+				color: @black-555;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.image-box-details .progress-item .progress .progress-bar {
+		border-radius: 20px;
+		font-size: 17px;
+		padding-left: 10px;
+		position: relative;
+		text-align: left;
+		width: 0;
+		line-height: 22px;
+		.transition(all 1s ease 0s);
+		.percent {
+			font-size: 13px;
+			padding: 0 11px; 
+			position: absolute;
+			right: -11px;
+			top: -2px;
+			z-index: 9999;
+		}
+		i {
+			position: absolute;
+			right: -4px;
+			top: -5px;
+			z-index: 1;
+		}
+	}
+
