@@ -1,2 +1,2 @@
 # naquettaricksfoundation.org
-repository for the website
+repository for the web site
