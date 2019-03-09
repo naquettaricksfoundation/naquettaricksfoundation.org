@@ -422,8 +422,15 @@
     <Content Include="images\close.png" />
     <Content Include="images\content\anes-sabitovic-286668-unsplash.jpg" />
     <Content Include="images\content\capturing-the-human-heart-227847-unsplash.jpg" />
+    <Content Include="images\content\courtney-baucom-606507-unsplash.jpg" />
+    <Content Include="images\content\david-clarke-638472-unsplash.jpg" />
+    <Content Include="images\content\davide-cantelli-153517-unsplash.jpg" />
+    <Content Include="images\content\doug-linstedt-135670-unsplash.jpg" />
+    <Content Include="images\content\jonathan-simcoe-227321-unsplash.jpg" />
     <Content Include="images\content\kat-yukawa-754726-unsplash.jpg" />
     <Content Include="images\content\perry-grone-732606-unsplash.jpg" />
+    <Content Include="images\content\sergiu-valena-698563-unsplash.jpg" />
+    <Content Include="images\content\stanislav-kondratiev-600080-unsplash.jpg" />
     <Content Include="images\content\volunteers-788592-unsplash.jpg" />
     <Content Include="images\favicon.png" />
     <Content Include="images\flat-color-icons-svg\about.svg" />
@@ -740,6 +747,7 @@
     <Content Include="images\flat-color-icons-svg\workflow.svg" />
     <Content Include="images\footer-bg.png" />
     <Content Include="images\logo-wide%402x.png" />
+    <Content Include="images\logo-wide-2.png" />
     <Content Include="images\logo-wide-white%402x.png" />
     <Content Include="images\logo-wide-white-footer%402x.png" />
     <Content Include="images\logo-wide-white-footer.png" />
@@ -831,6 +839,11 @@
     <Content Include="includes\twitter\twitteroauth\OAuth.php" />
     <Content Include="includes\twitter\twitteroauth\twitteroauth.php" />
     <Content Include="dindex.html" />
+    <Content Include="page-about1.html" />
+    <Content Include="page-about2.html" />
+    <Content Include="page-causes-grid-3-column.html" />
+    <Content Include="page-donate.html" />
+    <Content Include="page-gallery-3col.html" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\calendar-events-data.js" />
     <Content Include="scripts\chart.js" />
@@ -1025,7 +1038,9 @@
     <Content Include="video\ocean.jpg" />
     <Content Include="video\ocean.mp4" />
     <Content Include="video\ocean.webm" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1290,11 +1305,15 @@
     <Content Include="scripts\revolution-slider\fonts\revicons\revicons.woff" />
     <Content Include="scripts\revolution-slider\php\twitter\.DS_Store" />
     <Content Include="video\ocean.ogv" />
-    <None Include="Web.Debug.config">
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Web.LIVE.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
-    <None Include="Web.Release.config">
+    <None Include="Web.UAT.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -1309,6 +1328,12 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UAT|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LIVE|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
